@@ -1,28 +1,35 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import ReviewCard from "./ReviewCard";
 
-const Reveiw = () => {
+const Reveiw = ({service}) => {
+  const {_id} = service;
   const { user } = useContext(AuthContext);
-
+  const [reviews,setReviews] = useState([]);
+  useEffect(()=>{
+    fetch(`http://localhost:5000/review/${_id}`)
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data)
+      setReviews(data)
+    })
+  },[])
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="avatar ml-32">
-          <div className="w-24 rounded-full">
-            <img src="https://placeimg.com/192/192/people" alt="" />
-          </div>
-        </div>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
-      </div>
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mb-8 w-full mx-8">
+     {
+        reviews.map(reviewInfo => <ReviewCard
+        key={reviewInfo._id}
+        reviewInfo={reviewInfo}
+        ></ReviewCard>)
+      }
+     </div>
       <div className='text-center'>
          {
           user?.uid?
            <>
-           <Link to='/reviewform'>
+           <Link to={`/reviewform/${_id}`}>
          <button className="btn bg-rose-700 w-48 text-center">Add Review</button>
          </Link>
            </> :

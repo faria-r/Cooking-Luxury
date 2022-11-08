@@ -35,7 +35,8 @@ export const router = createBrowserRouter([
             element:<ServiceDetails></ServiceDetails>
         },
         {
-            path:'/reviewform',
+            path:'/reviewform/:id',
+            loader:({params})=> fetch(`http://localhost:5000/details/${params.id}`),
             element:<ReveiwForm></ReveiwForm>
         },
 
