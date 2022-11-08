@@ -2,7 +2,7 @@ import React from 'react';
 const Slider = () => {
     return (
         <div className=''>
-            <div className="carousel w-full">
+            <div className="carousel w-3/4 mx-auto shadow-xl mt-4 mb-8">
   <div id="slide1" className="carousel-item img relative w-full">
     <img alt=""className="w-full h-96"src="https://i.ibb.co/mG5xZtD/main.jpg"  />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
