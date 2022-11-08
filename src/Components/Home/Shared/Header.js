@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
+  const {user,logOut} = useContext(AuthContext);
+  const handleLogOut = ()=>{
+    logOut()
+    .then(()=>{})
+    .catch(e => console.error(e))
+  }
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -35,13 +40,13 @@ const Header = () => {
        <li><Link>Add Services</Link></li>
        <li>
         <Link>
-        <button className='btn bg-rose-700 tetx-white hover:bg-rose-500'>LogOut</button>
+        <button onClick={handleLogOut} className='btn bg-rose-700 tetx-white hover:bg-rose-500'>LogOut</button>
         </Link>
         </li>
       </> :
       <>
       <li>
-        <Link>
+        <Link to='/login'>
         <button className='btn bg-rose-700 tetx-white hover:bg-rose-500'>LogIn</button>
         </Link>
         </li>
