@@ -4,7 +4,8 @@ import { AuthContext } from "../Context/AuthProvider";
 
 import Reveiw from "../Review/Reveiw";
 import ServiceInfo from "../ServiceInfo/ServiceInfo";
-
+import { PhotoProvider } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const ServiceDetails = () => {
   const {loading} = useContext(AuthContext)
@@ -14,12 +15,16 @@ const ServiceDetails = () => {
 }
   return (
     <div>
-      {
+     <PhotoProvider>
+     <div>
+     {
         services.map(service => <ServiceInfo
         key={service._id}
         service={service}
         ></ServiceInfo>)
       }
+     </div>
+     </PhotoProvider>
      
       <div>
         <h2 className="text-6xl text-rose-600 text-center my-8 font-semibold ">
