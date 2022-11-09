@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBiMD1OG2eWkNC47MzIl9i5vjL1iygtec4",
-  authDomain: "farias-cooking-luxury.firebaseapp.com",
-  projectId: "farias-cooking-luxury",
-  storageBucket: "farias-cooking-luxury.appspot.com",
-  messagingSenderId: "10195811080",
-  appId: "1:10195811080:web:b5ab95766d7234e5664abd"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
