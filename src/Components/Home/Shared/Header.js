@@ -30,6 +30,7 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
       <li><Link to='/'>Home</Link></li>
+      <li><Link to='/blog'>Blog</Link></li>
       <li>
      <Link> <img src="https://i.ibb.co/GttwYvd/logo-svg.png" alt="" className='w-16' /></Link>
       </li>
@@ -54,9 +55,7 @@ const Header = () => {
      }
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Get started</a>
-  </div>
+  
 </div>
         </div>
     );

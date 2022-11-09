@@ -3,8 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
-const navigate = useNavigate()
+    const {createUser,loading} = useContext(AuthContext);
+const navigate = useNavigate();
+if(loading){
+  return  <progress className="progress bg-rose-600 w-56"></progress>
+}
     const handlesignUp = event =>{
         event.preventDefault();
         const form = event.target;

@@ -4,12 +4,16 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Login = () => {
-    const {loginwithGoogle,logIn} = useContext(AuthContext);
+    const {loginwithGoogle,logIn,loading} = useContext(AuthContext);
 const navigate = useNavigate();
 const location = useLocation();
 let from= location.state?.from?.pathname || '/';
     //google auth provider 
     const AuthProvider = new GoogleAuthProvider();
+
+    if(loading){
+      return  <progress className="progress bg-rose-600 w-56"></progress>
+  }
 //login with email and password
     const handleLogin = event =>{
         event.preventDefault();

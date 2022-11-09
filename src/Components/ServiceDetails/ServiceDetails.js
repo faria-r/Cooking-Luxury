@@ -1,13 +1,17 @@
-import React, { } from "react";
+import React, { useContext } from "react";
 import {  useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider";
 
 import Reveiw from "../Review/Reveiw";
 import ServiceInfo from "../ServiceInfo/ServiceInfo";
 
 
 const ServiceDetails = () => {
+  const {loading} = useContext(AuthContext)
   const services = useLoaderData();
- 
+  if(loading){
+    return  <progress className="progress bg-rose-600 w-56"></progress>
+}
   return (
     <div>
       {
