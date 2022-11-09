@@ -2,13 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import {} from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import ReviewRow from "./ReviewRow";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 const MyReviews = () => {
+  const  Swal = require('sweetalert2')
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
-  const notify = () => toast("Deleted SuccessFully");
   useEffect(() => {
     fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
       .then((res) => res.json())
@@ -26,8 +25,11 @@ const MyReviews = () => {
     .then(data =>{
         console.log(data)
         if(data.deletedCount>0){
-        // notify();
-        alert('Deleted SuccessFully!')
+          Swal.fire(
+            'Yes!',
+            'Data Deleted SuccessFully!',
+            'success'
+          )
         const remaining = reviews.filter(review => review._id !== id);
         setReviews(remaining)
         }
