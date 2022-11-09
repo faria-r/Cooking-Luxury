@@ -12,7 +12,7 @@ let from= location.state?.from?.pathname || '/';
     const AuthProvider = new GoogleAuthProvider();
 
     if(loading){
-      return  <progress className="progress bg-rose-600 w-56"></progress>
+      return  <progress className="progress text-center bg-rose-600 w-56"></progress>
   }
 //login with email and password
     const handleLogin = event =>{

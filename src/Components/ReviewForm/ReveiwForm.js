@@ -1,11 +1,12 @@
 import React, { } from "react";
 import { useLoaderData } from "react-router-dom";
 import ReviewDetails from "./ReviewDetails";
+import Swal from 'sweetalert2';
 
 
 const ReveiwForm = () => {
   const reviewItem = useLoaderData();
-
+  const  Swal = require('sweetalert2')
   const handleAddReview = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -34,7 +35,16 @@ const ReveiwForm = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        console.log(data);
+        if(data.acknowledged){
+          Swal.fire(
+            'Yes!',
+            'Review Added SuccessFully!',
+            'success'
+          )
+        }
+        form.reset();
+       
     })
   };
   return (
