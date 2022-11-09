@@ -38,6 +38,37 @@ const MyReviews = () => {
 
   }
 
+  const handleUpdate =(reviews,id) =>{
+    // event.preventDefault();
+    // const form = event.target;
+    // const name = form.name.value;
+    // const photo = form.photo.value;
+    // const review = form.review.value;
+    // const service = form.service.value;
+    // console.log(photo,service,name);
+    // const reviews = {
+    //   name,
+    //   photo,
+    //   review,
+    //   service
+    // }
+
+    fetch(`http://localhost:5000/reviews/${id}`,{
+      method:"PATCH",
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(reviews)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      if(data.modifiedCount>0){
+
+      }
+    })
+  }
+
   if (reviews.length > 0) {
     return(
         <div className="overflow-x-auto w-3/4 my-8 border border-rose-500 rounded-2xl mx-auto">
@@ -54,6 +85,7 @@ const MyReviews = () => {
               key={reviewInfo._id}
               reviewInfo={reviewInfo}
               handleDeleteReview={handleDeleteReview}
+              handleUpdate={handleUpdate}
               ></ReviewRow>
             ))}
           </tbody>
