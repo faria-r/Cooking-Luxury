@@ -3,7 +3,6 @@ import {} from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import ReviewRow from "./ReviewRow";
 import Swal from 'sweetalert2';
-
 const MyReviews = () => {
   const  Swal = require('sweetalert2')
   const { user } = useContext(AuthContext);
