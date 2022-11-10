@@ -21,13 +21,30 @@ if(loading){
         console.log(email,password);
         createUser(email,password)
         .then(result =>{
-            const user = result.user;
-            console.log(user);
-            form.reset();
-            navigate('/')
+          const user = result.user;
+          console.log(user);
+          const ExistingUser = {
+            email: user.email,
+          };
+  
+          //get a token for user
+          fetch("https://practice-three-server.vercel.app/jwt", {
+            method: "POSt",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(ExistingUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              localStorage.setItem("token", data.token);
+              navigate('/');
+            });
+          form.reset();
         })
-        .catch(e => console.error(e))
-    }
+        .catch((e) => console.error(e));
+    };
     return (
         <div>
            <div className="hero min-h-screen bg-base-200">
