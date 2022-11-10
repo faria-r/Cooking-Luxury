@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
 import { PhotoView } from "react-photo-view";
+import useTitle from '../../HOOks/useTitle';
 
 const ServiceInfo = ({service}) => {
+  useTitle('Services')
     const {_id,Price,picture,about,name} = service;
     return (
         <div>

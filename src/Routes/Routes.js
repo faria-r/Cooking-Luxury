@@ -8,6 +8,7 @@ import Register from "../Components/Login/Register";
 import MyReviews from "../Components/MyReview/MyReviews";
 import ReveiwForm from "../Components/ReviewForm/ReveiwForm";
 import ServiceDetails from "../Components/ServiceDetails/ServiceDetails";
+import UpdateReview from "../Components/UpdateReview/UpdateReview";
 import Main from "../LayOuts/Main/Main";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
@@ -34,22 +35,27 @@ export const router = createBrowserRouter([
         },
         {
             path:'/allservices',
-            loader:()=> fetch('http://localhost:5000/allservices'),
+            loader:()=> fetch('https://practice-three-server.vercel.app/allservices'),
             element:<AllServices></AllServices>
         },
         {
             path:'/details/:id',
-            loader:({params})=> fetch(`http://localhost:5000/details/${params.id}`),
+            loader:({params})=> fetch(`https://practice-three-server.vercel.app/details/${params.id}`),
             element:<ServiceDetails></ServiceDetails>
         },
         {
             path:'/reviewform/:id',
-            loader:({params})=> fetch(`http://localhost:5000/details/${params.id}`),
+            loader:({params})=> fetch(`https://practice-three-server.vercel.app/details/${params.id}`),
             element:<ReveiwForm></ReveiwForm>
         },
         {
             path:'/myReviews',
             element:<PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>
+        },
+        {
+            path:'/reviews/:id',
+            loader:({params}) => fetch(`https://practice-three-server.vercel.app/reviews/${params.id}`),
+            element:<UpdateReview></UpdateReview>
         },
         {
             path:'/addservice',

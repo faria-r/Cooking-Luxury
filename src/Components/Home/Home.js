@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../HOOks/useTitle';
 import Offers from '../Offers/Offers';
 import Order from '../Order/Order';
 import Services from '../Services/Services';
 import Slider from './Slider/Slider';
 
 const Home = () => {
+   
     return (
         <div>
            

@@ -6,8 +6,10 @@ import Reveiw from "../Review/Reveiw";
 import ServiceInfo from "../ServiceInfo/ServiceInfo";
 import { PhotoProvider } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import useTitle from "../../HOOks/useTitle";
 
 const ServiceDetails = () => {
+  useTitle('Services')
   const {loading} = useContext(AuthContext)
   const services = useLoaderData();
   if(loading){

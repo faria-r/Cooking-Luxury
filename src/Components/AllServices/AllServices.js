@@ -3,8 +3,10 @@ import { useLoaderData } from "react-router-dom";
 import SingleService from "./SingleService";
 import { PhotoProvider } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import useTitle from "../../HOOks/useTitle";
 
 const AllServices = () => {
+  useTitle('Services')
   const allservices = useLoaderData();
   console.log(allservices);
   return (

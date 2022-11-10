@@ -1,11 +1,12 @@
 import React, { } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import ReviewDetails from "./ReviewDetails";
 import Swal from 'sweetalert2';
 
 
 const ReveiwForm = () => {
   const reviewItem = useLoaderData();
+  const navigate = useNavigate();
   const  Swal = require('sweetalert2')
   const handleAddReview = (event) => {
     event.preventDefault();
@@ -16,6 +17,7 @@ const ReveiwForm = () => {
     const service = form.serviceName.value;
     const id = form.id.value;
     const review = form.review.value;
+    const Date = form.Date.value;
     console.log(name, email, photo, review);
 
     const reviews = {
@@ -24,9 +26,10 @@ const ReveiwForm = () => {
       photo,
       review,
       service,
+      Date,
       id
     };
-    fetch('http://localhost:5000/reviews',{
+    fetch('https://practice-three-server.vercel.app/reviews',{
         method:"POST",
         headers:{
             'content-type':'application/json'
@@ -41,7 +44,8 @@ const ReveiwForm = () => {
             'Yes!',
             'Review Added SuccessFully!',
             'success'
-          )
+          );
+          navigate('/myReviews')
         }
         form.reset();
        

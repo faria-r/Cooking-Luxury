@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useTitle from '../../HOOks/useTitle';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Register = () => {
     const {createUser,loading} = useContext(AuthContext);
+    useTitle('Register')
 const navigate = useNavigate();
 if(loading){
   return  <progress className="progress bg-rose-600 w-56"></progress>

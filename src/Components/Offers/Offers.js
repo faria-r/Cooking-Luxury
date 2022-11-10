@@ -5,10 +5,9 @@ const Offers = () => {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/offers")
+    fetch("https://practice-three-server.vercel.app/offers")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setOffers(data);
       });
   }, []);

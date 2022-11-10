@@ -1,41 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider";
 
-const ReviewRow = ({ reviewInfo, handleDeleteReview, handleUpdate }) => {
+const ReviewRow = ({ reviewInfo, handleDeleteReview }) => {
   const { service, photo, review, name, _id } = reviewInfo;
-  console.log(_id)
-
-  const handleUpdateData =event =>{
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const photo = form.photo.value;
-    const review = form.review.value;
-    const service = form.service.value;
-    console.log(photo,service,name);
-    const reviews = {
-      name,
-      photo,
-      review,
-      service
-    }
-handleUpdate(reviews,_id);
-console.log(_id)
-    // fetch(`http://localhost:5000/reviews/${_id}`,{
-    //   method:"PATCH",
-    //   headers:{
-    //     'content-type':'application/json'
-    //   },
-    //   body:JSON.stringify(reviews)
-    // })
-    // .then(res => res.json())
-    // .then(data => {
-    //   console.log(data)
-    //   if(data.modifiedCount>0){
-
-    //   }
-    // })
+  const { loading } = useContext(AuthContext);
+  if (loading) {
+    return (
+      <div className="text-center">
+        <progress className="progress text-center bg-rose-600 w-56"></progress>
+      </div>
+    );
   }
+
   return (
     <div>
       <tr className="my-4">
@@ -64,63 +41,11 @@ console.log(_id)
         <td>{service}</td>
         <td>{review}</td>
         <th>
-          <label
-            htmlFor="my-modal"
-            className="btn border text-rose-600 btn-outline border-rose-800"
-          >
-            Edit Review
-          </label>
-          <input type="checkbox" id="my-modal" className="modal-toggle" />
-          <div className="modal">
-            <form onSubmit={handleUpdateData}>
-              <div className="modal-box">
-                <h3 className="font-bold text-lg">Update Your Review Here</h3>
-                <div className="block">
-                  <div>
-                    <div className="flex items-center space-x-3">
-                      <div className="my-4">
-                        <input
-                          className="p-3 border border-rose-700 rounded-lg"
-                          type="text"
-                          name="name"
-                          defaultValue={name} readOnly
-                          placeholder="name"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="my-4">
-                    <input
-                      className="p-3 border border-rose-700 rounded-lg"
-                      type="text"
-                      name="service"
-                    />
-                  </div>
-                  <div className="my-4">
-                    <input
-                      className="p-3 border border-rose-700 rounded-lg"
-                      type="text"
-                      name="photo"
-                    />
-                  </div>
-                  <div className="my-4">
-                    <textarea
-                      name="review"
-                      className="textarea textarea-secondary"
-                      placeholder="Update Your reviews"
-                    ></textarea>
-                  </div>
-                </div>
-                <div className="modal-action">
-                  <button type="submit" className="btn">
-                    <label htmlFor="my-modal" className="btn">
-                      Update
-                    </label>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+          <Link to={`/reviews/${_id}`}>
+            <button className="btn border text-rose-600 btn-outline border-rose-800">
+              Edit Review
+            </button>
+          </Link>
         </th>
       </tr>
     </div>

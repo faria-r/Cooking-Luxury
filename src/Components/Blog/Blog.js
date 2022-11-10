@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../HOOks/useTitle";
 
 const Blog = () => {
+  useTitle('Blog')
   return (
     <div className="w-3/4  mx-auto">
       <div className="collapse border border-rose-600 mb-2 rounded-lg">
