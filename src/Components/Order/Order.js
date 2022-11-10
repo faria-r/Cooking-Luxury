@@ -1,9 +1,15 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import DatePicker from 'react-date-picker';
+import Swal from "sweetalert2";
 const Order = () => {
     const [value, onChange] = useState(new Date());
+    const Swal = require("sweetalert2");
   const { user } = useContext(AuthContext);
+
+  const handlePlaceOrder = ()=>{
+    Swal.fire("Yes!", "Order Placed SuccessFully!", "success");
+  }
   return (
     <div className="mt-16 w-3/4 mx-auto">
       <div
@@ -36,7 +42,7 @@ const Order = () => {
               />
               <DatePicker onChange={onChange} value={value} />
             </div>
-            <button className="btn my-8 bg-rose-700">Place Order</button>
+            <button onClick={handlePlaceOrder} className="btn my-8 bg-rose-700">Place Order</button>
           </div>
         </div>
       </div>
