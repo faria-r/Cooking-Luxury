@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from "../Context/AuthProvider";
-import DatePicker from 'react-date-picker';
+import DateTimePicker from 'react-datetime-picker';
 
 const ReviewDetails = ({item,handleAddReview}) => {
   const [value, onChange] = useState(new Date());
@@ -90,7 +90,7 @@ const ReviewDetails = ({item,handleAddReview}) => {
                     name="review"
                     placeholder="Review Goes Here"
                   ></textarea>
-                    <DatePicker name="Date" onChange={onChange} value={value} />
+                      <DateTimePicker onChange={onChange} value={value} />
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Add</button>
