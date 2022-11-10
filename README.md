@@ -1,8 +1,7 @@
 # Faria's Cooking Luxury
 
- [Luxury Logo][(https://i.ibb.co/GttwYvd/logo-svg.png)]
 
-Live Website [Create React App](https://github.com/facebook/create-react-app).
+Live Website [Farias Cooking Luxury](https://farias-cooking-luxury.web.app/).
 
 ## Functionality You Can Ineterect With This Website:
 - you can Give review On Different Services
