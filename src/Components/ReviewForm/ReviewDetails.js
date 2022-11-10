@@ -90,7 +90,7 @@ const ReviewDetails = ({item,handleAddReview}) => {
                     name="review"
                     placeholder="Review Goes Here"
                   ></textarea>
-                      <DateTimePicker onChange={onChange} value={value} />
+                      <DateTimePicker name='Date' onChange={onChange} value={value} />
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Add</button>

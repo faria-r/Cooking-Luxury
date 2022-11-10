@@ -17,8 +17,10 @@ const ReveiwForm = () => {
     const service = form.serviceName.value;
     const id = form.id.value;
     const review = form.review.value;
-    const Date = form.Date.value;
-    console.log(name, email, photo, review);
+    let Date = form.Date.value;
+    const date = Date.slice(0,10);
+    const time = Date.slice(11,16);
+    console.log(name, email, photo, review,date,time);
 
     const reviews = {
       name,
@@ -26,7 +28,8 @@ const ReveiwForm = () => {
       photo,
       review,
       service,
-      Date,
+      date,
+      time,
       id
     };
     fetch('https://practice-three-server.vercel.app/reviews',{

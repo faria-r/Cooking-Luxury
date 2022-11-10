@@ -18,9 +18,9 @@ const Order = () => {
             <h1 className="text-white text-6xl font-bold mb-8">
               Book An Order!
             </h1>
-            <div className="flex justify-evenly">
+            <div className=" flex flex-col lg:flex-row  justify-evenly">
               <input
-                className="p-5 mr-4 border border-white text-xl text-white rounded-lg bg-transparent "
+                className="p-5 mb-4 mr-4 border border-white text-xl text-white rounded-lg bg-transparent "
                 placeholder=""
                 defaultvalue={user?.email}
                 type="email"
@@ -28,7 +28,7 @@ const Order = () => {
                 id=""
               />
               <input
-                className="p-5 mr-4 border border-white text-xl text-white rounded-lg bg-transparent"
+                className="p-5 mb-4 mr-4 border border-white text-xl text-white rounded-lg bg-transparent"
                 placeholder="Enter Service Name"
                 type="text"
                 name=""
