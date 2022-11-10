@@ -8,7 +8,9 @@ const Register = () => {
     useTitle('Register')
 const navigate = useNavigate();
 if(loading){
-  return  <progress className="progress bg-rose-600 w-56"></progress>
+  return  <div className='text-center'>
+    <progress className="progress bg-rose-600 w-56"></progress>
+  </div>
 }
     const handlesignUp = event =>{
         event.preventDefault();

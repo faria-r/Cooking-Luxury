@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../HOOks/useTitle';
+import { AuthContext } from '../Context/AuthProvider';
 import Offers from '../Offers/Offers';
 import Order from '../Order/Order';
 import Services from '../Services/Services';
 import Slider from './Slider/Slider';
 
 const Home = () => {
+  const {loading} = useContext(AuthContext);
+
+  if(loading){
+    return  <div className='text-center'>
+            <progress className="progress text-center bg-rose-600 w-56"></progress>
+        </div>
+  }
    
     return (
         <div>

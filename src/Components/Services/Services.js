@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ServicesCard from '../ServicesCard/ServicesCard';
 import { PhotoProvider } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import { AuthContext } from '../Context/AuthProvider';
 
 
 const Services = () => {
+ 
     const [services,setServices] = useState([]);
     useEffect(()=>{
         fetch('https://practice-three-server.vercel.app/services')
