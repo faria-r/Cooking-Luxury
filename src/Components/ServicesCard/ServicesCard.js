@@ -13,7 +13,7 @@ const ServicesCard = ({ service }) => {
   }
   return (
     <div>
-      <div className="hero w-full lg:h-96 mx-auto lg:p-5 bg-base-200">
+      <div className="hero w-full border border-rose-500 rounded-2xl shadow-lg shadow-rose-600 lg:h-96 mx-auto lg:p-5 bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <PhotoView src={picture}>
             <img src={picture} alt="" className="w-48 rounded-lg shadow-2xl" />
