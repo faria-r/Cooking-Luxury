@@ -93,7 +93,7 @@ const ReviewDetails = ({item,handleAddReview}) => {
                       <DateTimePicker name='Date' onChange={onChange} value={value} />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Add</button>
+                  <button className="btn bg-rose-700 px-12 mx-auto">Add</button>
                 </div>
               </div>
             </form>

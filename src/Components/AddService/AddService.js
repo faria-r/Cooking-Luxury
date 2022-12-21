@@ -103,7 +103,7 @@ const AddService = () => {
                   ></textarea>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Add</button>
+                  <button className="btn  bg-rose-700 px-12 mx-auto">Add</button>
                 </div>
               </div>
             </form>

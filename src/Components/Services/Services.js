@@ -8,13 +8,17 @@ import { AuthContext } from '../Context/AuthProvider';
 const Services = () => {
  
     const [services,setServices] = useState([]);
+    const {loading} = useContext(AuthContext)
     useEffect(()=>{
         fetch('https://practice-three-server.vercel.app/services')
         .then(res => res.json())
         .then(data =>{
             setServices(data)
         })
-    },[])
+    },[]);
+    if(loading){
+        return <progress className="progress text-center bg-rose-600 w-56"></progress>
+    }
     return (
        <PhotoProvider>
          <div className='grid grid-cols-1 lg:grid-cols-2 w-3/4 mx-auto gap-4'>

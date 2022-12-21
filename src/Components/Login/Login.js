@@ -82,8 +82,8 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col">
+      <div className="hero min-h-screen bg-base-200 ">
+        <div className="hero-content flex-col  shadow-xl rounded-2xl p-6 border  border-rose-500 shadow-rose-700">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
@@ -121,7 +121,7 @@ const Login = () => {
             </form>
             <button
               onClick={handleLoginWithGoogle}
-              className="btn bg-rose-500 hover:bg-white text-black "
+              className="btn bg-rose-600 hover:bg-white  text-white "
             >
               Login With Google
             </button>
