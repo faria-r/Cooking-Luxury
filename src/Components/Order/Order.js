@@ -11,7 +11,7 @@ const Order = () => {
     Swal.fire("Yes!", "Order Placed SuccessFully!", "success");
   }
   return (
-    <div className="mt-16 w-3/4 mx-auto">
+    <div className="mt-16 w-3/4 mx-auto rounded-2xl">
       <div
         className="hero min-h-screen"
         style={{
