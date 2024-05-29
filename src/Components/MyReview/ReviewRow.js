@@ -14,7 +14,7 @@ const ReviewRow = ({ reviewInfo, handleDeleteReview }) => {
   }
 
   return (
-    <div>
+    <div className=" ">
       <tr className="my-4">
         <th>
           <Link>

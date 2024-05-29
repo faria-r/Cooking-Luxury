@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div>
-     <div className="relative">
+     <div className="">
      <Slider></Slider>
      </div>
       <h2 className="text-6xl text-rose-600 text-center my-4 font-semibold ">

@@ -17,7 +17,7 @@ const Reveiw = ({service}) => {
   },[])
   return (
     <div>
-     <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-8 w-3/4 mx-auto">
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mb-8 w-[90vw] mx-auto">
      {
         reviews.map(reviewInfo => <ReviewCard
         key={reviewInfo._id}

@@ -6,7 +6,7 @@ const SingleService = ({ services }) => {
   const { name, _id, Price, picture, about } = services;
   return (
     <div>
-      <div className="hero w-full h-full pt-36 bg-base-200">
+      <div className="hero w-full h-full pt-48 bg-base-200">
         <div className="hero-content flex-col lg:flex-col">
           <PhotoView src={picture}>
             <img src={picture} alt="" className="w-96 h-64" />

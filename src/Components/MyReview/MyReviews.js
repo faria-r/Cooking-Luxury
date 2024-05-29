@@ -45,8 +45,8 @@ const MyReviews = () => {
 
   if (reviews.length > 0) {
     return (
-      <div className="overflow-x-auto pt-36 w-5/6 my-8 border border-rose-500 rounded-2xl mx-auto">
-        <table className="table w-full">
+      <div className="overflow-x-auto w-5/6 border border-rose-500 rounded-2xl mx-auto">
+        <table className="table w-full  pt-48">
           <thead>
             <tr>
               <th>Your Reviews</th>
@@ -66,7 +66,7 @@ const MyReviews = () => {
     );
   } else {
     return (
-      <div className="hero min-h-screen">
+      <div className="hero min-h-screen mt-36">
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl text-rose-800  font-bold">

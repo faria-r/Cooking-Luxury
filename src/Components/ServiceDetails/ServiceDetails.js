@@ -16,7 +16,7 @@ const ServiceDetails = () => {
     return  <progress className="progress text-center bg-rose-600 w-56"></progress>
 }
   return (
-    <div>
+    <div className="pt-16">
      <PhotoProvider>
      <div>
      {
