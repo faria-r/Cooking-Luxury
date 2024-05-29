@@ -20,13 +20,13 @@ const Order = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="text-white text-6xl font-bold mb-8">
+          <div className="w-full mx-auto">
+            <h1 className="text-white text-xl lg:text-6xl font-bold mb-8">
               Book An Order!
             </h1>
-            <div className=" flex flex-col lg:flex-row  justify-evenly">
+            <div className=" flex flex-col lg:flex-row p-3 gap-4 justify-evenly">
               <input
-                className="p-5 mb-4 mr-4 border border-white text-xl text-white rounded-lg bg-transparent "
+                className="p-4 mb-4 border border-white text-xl text-white  bg-transparent "
                 placeholder=""
                 defaultvalue={user?.email}
                 type="email"
@@ -34,7 +34,7 @@ const Order = () => {
                 id=""
               />
               <input
-                className="p-5 mb-4 mr-4 border border-white text-xl text-white rounded-lg bg-transparent"
+                className="p-4 mb-4 border border-white text-xl text-white  bg-transparent"
                 placeholder="Enter Service Name"
                 type="text"
                 name=""

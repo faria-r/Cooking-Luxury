@@ -72,7 +72,7 @@ const Header = () => {
             )}
             </ul>
           </div>
-          <a className=" text-rose-700 normal-case text-3xl" href="/">
+          <a className=" text-rose-700 font-mono normal-case text-xl lg:text-3xl" href="/">
             Faria's Cooking Luxury
           </a>
         </div>

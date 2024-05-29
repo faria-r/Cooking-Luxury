@@ -13,7 +13,7 @@ const ServicesCard = ({ service }) => {
   }
   return (
     <div>
-      <div className="w-full border border-rose-500 rounded-2xl shadow-lg shadow-rose-600 lg:h-[80vh] mx-auto lg:px-4 py-2 bg-base-200">
+      <div className="w-full border border-rose-500 rounded-2xl shadow-lg shadow-rose-600 lg:h-[80vh] mx-auto px-2 lg:px-4 py-2 bg-base-200">
    
         <div className="flex-col justify-around items-center">
           <div>
@@ -22,7 +22,7 @@ const ServicesCard = ({ service }) => {
           </PhotoView>
           </div>
           <div className="">
-          <h1 className="text-3xl mt-6 mb-4 font-mono font-bold">{name}</h1>
+          <h1 className=" text-xl lg:text-3xl mt-6 mb-4 font-mono font-bold">{name}</h1>
             <p className="pb-4">{about.slice(0, 100) + "..."}</p>
             <p className="py-2">Price: ${Price}</p>
             <Link to={`/details/${_id}`}>
