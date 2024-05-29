@@ -13,15 +13,18 @@ const ServicesCard = ({ service }) => {
   }
   return (
     <div>
-      <div className="hero w-full border border-rose-500 rounded-2xl shadow-lg shadow-rose-600 lg:h-96 mx-auto lg:p-5 bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="w-full border border-rose-500 rounded-2xl shadow-lg shadow-rose-600 lg:h-[80vh] mx-auto lg:px-4 py-2 bg-base-200">
+   
+        <div className="flex-col justify-around items-center">
+          <div>
           <PhotoView src={picture}>
-            <img src={picture} alt="" className="w-48 rounded-lg shadow-2xl" />
+            <img src={picture} alt="" className="w-3/4 h-[32vh] mx-auto rounded-lg shadow-2xl" />
           </PhotoView>
-          <div className="w-1/2">
-            <h1 className="text-3xl font-bold">{name}</h1>
-            <p className="py-6">{about.slice(0, 100) + "..."}</p>
-            <p className="py-6">Price: ${Price}</p>
+          </div>
+          <div className="">
+          <h1 className="text-3xl mt-6 mb-4 font-mono font-bold">{name}</h1>
+            <p className="pb-4">{about.slice(0, 100) + "..."}</p>
+            <p className="py-2">Price: ${Price}</p>
             <Link to={`/details/${_id}`}>
               <button className="btn bg-rose-700">Veiw Details</button>
             </Link>
