@@ -22,7 +22,7 @@ const Offers = () => {
           Juice
         </button>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-24 mx-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-[90vw] mx-auto gap-4 mt-24 ">
         {offers.map((offer) => (
           <OfferCard key={offer._id} offer={offer}></OfferCard>
         ))}
