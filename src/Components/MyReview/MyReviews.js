@@ -45,7 +45,7 @@ const MyReviews = () => {
 
   if (reviews.length > 0) {
     return (
-      <div className="overflow-x-auto w-5/6 my-8 border border-rose-500 rounded-2xl mx-auto">
+      <div className="overflow-x-auto pt-36 w-5/6 my-8 border border-rose-500 rounded-2xl mx-auto">
         <table className="table w-full">
           <thead>
             <tr>

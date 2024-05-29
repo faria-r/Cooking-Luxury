@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import useTitle from "../../HOOks/useTitle";
 import { AuthContext } from "../Context/AuthProvider";
 import Offers from "../Offers/Offers";
 import Order from "../Order/Order";
@@ -20,7 +19,9 @@ const Home = () => {
 
   return (
     <div>
-      <Slider></Slider>
+     <div className="relative">
+     <Slider></Slider>
+     </div>
       <h2 className="text-6xl text-rose-600 text-center my-4 font-semibold ">
         Services
       </h2>

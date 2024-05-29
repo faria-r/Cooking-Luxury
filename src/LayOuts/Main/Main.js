@@ -6,8 +6,12 @@ import Header from '../../Components/Home/Shared/Header';
 const Main = () => {
     return (
         <div>
+            <div className='relative'>
             <Header></Header>
-            <Outlet></Outlet>
+            </div>
+           <div>
+           <Outlet></Outlet>
+           </div>
             <Footer></Footer>
         </div>
     );

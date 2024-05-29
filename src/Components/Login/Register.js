@@ -47,7 +47,7 @@ if(loading){
     };
     return (
         <div>
-           <div className="hero min-h-screen bg-base-200">
+           <div className="hero min-h-screen pt-36 pb-16 bg-base-200">
   <div className="hero-content flex-col">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Sign Up!</h1>

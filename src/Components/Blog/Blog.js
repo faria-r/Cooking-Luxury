@@ -4,7 +4,7 @@ import useTitle from "../../HOOks/useTitle";
 const Blog = () => {
   useTitle('Blog')
   return (
-    <div className="w-3/4  mx-auto">
+    <div className="w-3/4 pt-36  mx-auto">
       <div className="collapse border border-rose-600 mb-2 rounded-lg">
         <input type="checkbox" className="peer" />
         <div className="collapse-title bg-gray-800  flex justify-between peer-checked:bg-gray-900 peer-checked:text-secondary-content">
