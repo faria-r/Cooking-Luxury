@@ -24,7 +24,7 @@ const Slider = () => {
           {" "}
           <Link to="/allservices">
             <button className="btn bg-rose-700 tetx-white hover:bg-rose-500">
-              Get Started
+              See All Services
             </button>
           </Link>
         </div>

@@ -96,6 +96,7 @@ const Login = () => {
                   </label>
                   <input
                     type="text"
+                    required
                     name="email"
                     placeholder="email"
                     className="input input-bordered"
@@ -108,6 +109,7 @@ const Login = () => {
                   <input
                     type="text"
                     name="password"
+                    required
                     placeholder="password"
                     className="input input-bordered"
                   />

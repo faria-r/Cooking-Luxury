@@ -67,6 +67,7 @@ const AddService = () => {
                     <input
                       type="text"
                       name="name"
+                      required
                       placeholder="service Name"
                       className="input input-bordered"
                     />
@@ -78,6 +79,7 @@ const AddService = () => {
                     <input
                       type="text"
                       name="price"
+                      required
                       placeholder="Price"
                       className="input input-bordered"
                       
@@ -88,6 +90,7 @@ const AddService = () => {
                       <span className="label-text">PhotoURL</span>
                     </label>
                     <input
+                     required
                       type="text"
                       name="photo"
                       placeholder="Your Photo URL"
@@ -97,6 +100,7 @@ const AddService = () => {
                  
                 
                   <textarea
+                   required
                     className="textarea textarea-secondary"
                     name="about"
                     placeholder="Details about service"
